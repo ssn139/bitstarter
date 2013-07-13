@@ -72,7 +72,7 @@ if(require.main == module) {
          var htmlfile = program.file;
          if(program.url) {
 	    rest.get(program.url).on('complete', function(result){
-		       fs.writeFileSync("url.html", result);
+		       fs.writeFile("url.html", result);
 		});
 	         htmlFile = "url.html";
     }
